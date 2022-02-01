@@ -1,13 +1,16 @@
 class Game {
-    constructor(ctx,background,player){
+    constructor(ctx,background,player,enemies){
         this.ctx = ctx;
         this.background = background;
         this.player = player;
-        this.frameNumber = 0;   
+        this.frameNumber = 0; 
+        this.enemies = enemies;
+        this.enemyClock = setInterval(this.enemies.addEnemy.bind(enemies), 5 * 1000) // intervalo de tiempo de los enemigos
+        
     }
 
     start(){ //inicia el juego
-        console.log("Hola estas ahí?")
+        
         this.init()
         this.play()
     }
@@ -24,16 +27,21 @@ class Game {
         //this.ctx.clearRect(0,0,ctx.canvas.width, ctx.canvas.height)
         this.draw();
         requestAnimationFrame(this.play.bind(this))
+        
     } 
 
-    /*move(){
-        this.background.move(this.frameNumber);
-    }*/
+    move(event){
+              //this.background.move(this.frameNumber);
+        this.player.move(event, this.frameNumber);
+
+    }
 
     draw(){
         this.ctx.clearRect(0,0, ctx.canvas.width,ctx.canvas.height);
         this.background.draw(this.frameNumber);
         this.player.draw(this.frameNumber);
+        this.enemies.draw(this.frameNumber);
+        
     }
 
 }

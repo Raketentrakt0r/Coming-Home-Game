@@ -8,7 +8,7 @@ class Player{
         this.y = 10;
 
         this.vx = 0;
-        this.vy = 0;
+        this.vy = 0.1;
         
 
         this.img = new Image();
@@ -19,45 +19,41 @@ class Player{
         this.x= 10;
         this.y= 10;
         this.vx = 0;
-
     }
 
-    move(){
-        document.addEventListener("keydown", (e) =>{
-            switch(e.keyCode){
+    move(event){      
+        if(event.type === "keyup"){
+            this.vx = 0
+            this.vy = 0
+        }else if(event.type === "keydown"){
+            this.vx = 1
+            this.vy = 1
+        }
+        
+            switch(event.keyCode){
                 case 38:
-                    player.vy -= 1;
+                    this.y += -this.vy;
                     break;
                 case 40:
-                    player.vy += 1;
+                    this.y += this.vy;
                     break;
                 case 37:
-                    player.vx -= 1;
+                    this.x += -this.vx;
                     break;
                 case 39:
-                    player.vx += 1;
+                    this.x += this.vx;
                     break;
-            }
-        });
-
-        document.addEventListener("keyup",(e) =>{
-            player.vx=0;
-            player.vy=0;
-        })
-
-
+            };    
     }
     
-    
     draw(frameNumber){
-        console.log("Qué pasa!?")
+        
         this.ctx.drawImage(
         this.img,
         this.x,
         this.y,
         this.width,
         this.height,
-        
         );
     };
 }

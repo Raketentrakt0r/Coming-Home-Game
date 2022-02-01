@@ -11,8 +11,8 @@ body button{
 }
 
 canvas {
-    width: 600px;
-    height: 300px;
+    width: 800px;
+    height: 500px;
     border: 5px solid black;    
 }
 
