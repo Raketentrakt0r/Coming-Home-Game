@@ -5,7 +5,7 @@ class Game {
         this.player = player;
         this.frameNumber = 0; 
         this.enemies = enemies;
-        this.enemyClock = setInterval(this.enemies.addEnemy.bind(enemies), 5 * 1000) // intervalo de tiempo de los enemigos
+        this.enemyClock = setInterval(this.enemies.addEnemy.bind(enemies), 2 * 1000) // intervalo de tiempo de los enemigos
         
     }
 

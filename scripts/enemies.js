@@ -22,9 +22,12 @@ class Enemies{
             vx:this.vx,
             vy:this.vy
         }
-        for(let i = 0; i < 10; i++ ){
-            this.items.push(newEnemy) //agrega cada item al array 
+        if(this.items.length < 10){ // solo quiero 10 enemigos
+             this.items.push(newEnemy)
         }
+        
+         
+        
          
        
     }
