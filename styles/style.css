@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+}
+
+body button{
+    background-color: black;
+    color: greenyellow;
+    padding: 15px 15px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+canvas {
+    width: 600px;
+    height: 300px;
+    border: 5px solid black;    
+}
+
+
