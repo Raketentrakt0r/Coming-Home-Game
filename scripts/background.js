@@ -17,8 +17,7 @@ class Background {
     }
 
     move(frameNumber){
-       
-       
+           
     }
 
     draw(frameNumber){
@@ -30,15 +29,6 @@ class Background {
             this.y,
             this.width,
             this.height
-        );
-            this.drawImage(
-            this.img,
-            this.x + this.width,
-            this.y + this.height,
-            this.width,
-            this.height,
-
-        )
-           
+        );    
     }
 }

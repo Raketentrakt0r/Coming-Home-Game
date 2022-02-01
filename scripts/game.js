@@ -1,21 +1,21 @@
 class Game {
-    constructor(ctx,background){
+    constructor(ctx,background,player){
         this.ctx = ctx;
-        //this.player = player;
         this.background = background;
+        this.player = player;
         this.frameNumber = 0;   
     }
 
     start(){ //inicia el juego
-        console.log("")
+        console.log("Hola estas ahí?")
         this.init()
-        this.draw()
-       // this.play()
+        this.play()
     }
     
     init(){
         this.frameNumber = 0
-        //this.background.init()
+        this.background.init()
+        this.player.init()
     }
 
     play(){
@@ -31,9 +31,9 @@ class Game {
     }*/
 
     draw(){
-                                                        //this.ctx.clearRect(0,0, ctx.canas.width,ctx.canvas.height);
-        this.background.draw();
-
+        this.ctx.clearRect(0,0, ctx.canvas.width,ctx.canvas.height);
+        this.background.draw(this.frameNumber);
+        this.player.draw(this.frameNumber);
     }
 
 }
