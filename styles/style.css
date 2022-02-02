@@ -10,10 +10,5 @@ body button{
     border-radius: 8px;
 }
 
-canvas {
-    width: 800px;
-    height: 500px;
-    border: 5px solid black;    
-}
 
 
