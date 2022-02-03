@@ -5,7 +5,7 @@ class Game {
         this.player = player;
         this.frameNumber = 0; 
         this.enemies = enemies;
-        this.enemyClock = null// intervalo de tiempo de los enemigos
+        this.enemyClock = null
         this.bullets = bullets;
         
     }

@@ -28,7 +28,12 @@ class Enemies{
             vy:this.vy
         }
         // solo quiero 10 enemigos
-             this.items.push(newEnemy)
+        if (this.items < 10){
+            this.items.push(newEnemy)
+        }
+            
+        
+             
     // }
          //console.log(this.items)
     }
@@ -53,11 +58,11 @@ class Enemies{
 
 
   // verificar logica de colision
-  /*collidesWith(enemy, object){
+  collidesWith(enemy, bullet){
       let isCollision = false
       // logica de choque que muda el valor de isCollision
 
-      if(enemy.x >= object.x){
+      if(enemy.x >= bullet.x && bullet.y <= enemy.y){
 
           if(
               object.y <= enemy.y + this.height &&
@@ -66,7 +71,7 @@ class Enemies{
             }
     }
       return isCollision 
-  }*/
+  }
 
     
 }
