@@ -21,30 +21,28 @@ startButton.onclick = () => {
 document.addEventListener("keydown", (event) =>{
     switch(event.code){
         case "ArrowUp":
-            //this.y += -this.vy;
             player.vy = -1
-            
             break;
+
         case "ArrowDown":
-            //this.y += this.vy;
             player.vy = 1
-           
             break;
-        case "ArrowLeft":
-            //this.x += -this.vx;
+
+        case "ArrowLeft": 
             player.vx = -1
-            
             break;
+
         case "ArrowRight":
-            //this.x += this.vx;
             player.vx = 1
-            
             break;
+            
         case "Space":
-          bullets.shot(player)            
+          bullets.shot(player); 
+          game.shotSound.play()
     };  
 
 }
+
           
 )
 

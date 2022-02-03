@@ -11,31 +11,27 @@ class Enemies{
         this.vy = 0;
         
         this.img = new Image();
-        this.img.src = "/images/alien.png"; 
+        this.img.src = "images/alien.png"; 
         this.items = [];
     }
 
     init(){
         this.items = []
+        
     }
 
 
     addEnemy(){
         let newEnemy ={
-            x: Math.random() * 800, //crea enemgos aleatoriamente 
-            y: Math.random() * 500, 
+            x: 100 + Math.random(this.x) * 600, //la "x" parte del 100 (canvas) y su limite es 600 del canvas.
+            y: Math.random(this.y) * 500, 
             vx:this.vx,
-            vy:this.vy
+            vy:this.vy    
         }
         // solo quiero 10 enemigos
-        
+            console.log("enemy: ", this.items)
+            if (this.items.length < 10) // Ya funciona, pero en consola itera más veces ????
             this.items.push(newEnemy)
-        
-            
-        
-             
-    // }
-         //console.log(this.items)
     }
 
     
@@ -51,17 +47,37 @@ class Enemies{
 )}
 
   checkBulletCollision(bullets){
-     this.items =  this.items.filter((enemy)=>{
+    /* 
+    this.items =  this.items.filter((enemy)=>{
           !bullets.items.every((bullet)=>this.collidesWith(enemy, bullet))
-      })
+      }) */
   }
 
 
   // verificar logica de colision
   collidesWith(enemy, bullet){
       let isCollision = false
-      // logica de choque que muda el valor de isCollision
 
+      console-log("")
+/*
+    for(let i = 0; i < this.items; i++){
+        for(let r = 0; i < this.items; i++){
+            let b = items[i][r];
+            if(enemy.x >= bullet.x && bullet.y <= enemy.y){
+
+                if(
+                    bullet.y <= enemy.y + this.height &&
+                    bullet.y + bullet.height >= enemy.y){
+                      isCollision = true
+                  }
+          }
+        }
+    }
+    return isCollision
+
+*/
+      // logica de choque que muda el valor de isCollision
+/*
       if(enemy.x >= bullet.x && bullet.y <= enemy.y){
 
           if(
@@ -70,7 +86,7 @@ class Enemies{
                 isCollision = true
             }
     }
-      return isCollision 
+      return isCollision */
   }
 
     

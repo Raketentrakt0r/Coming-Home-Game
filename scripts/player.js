@@ -4,20 +4,19 @@ class Player{
         this.width = 45;
         this.height = 25;
         
-        this.x = 20;
-        this.y = 20;
+        this.x = 35;
+        this.y = 35;
 
         this.vx = 0;
         this.vy = 0;
         
-
         this.img = new Image();
         this.img.src = "images/rocket.png"; 
-    }
+    } 
 
     init(){
-        this.x= 20;
-        this.y= 20;
+        this.x= 35;
+        this.y= 35;
         this.vx = 0;
         this.vz = 0;
     }
