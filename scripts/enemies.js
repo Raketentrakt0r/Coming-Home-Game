@@ -28,9 +28,9 @@ class Enemies{
             vy:this.vy
         }
         // solo quiero 10 enemigos
-        if (this.items < 10){
+        
             this.items.push(newEnemy)
-        }
+        
             
         
              
