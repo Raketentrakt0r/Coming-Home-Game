@@ -10,8 +10,7 @@ class Game {
         
     }
 
-    start(){ //inicia el juego
-        
+    start(){ 
         this.init()
         this.play()
     }
